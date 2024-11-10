@@ -1,24 +1,97 @@
-# AI 对话助手
+# Video Recognition System
 
-## 项目简介
-这是一个基于 Python Flask 开发的 AI 对话助手网页应用。用户可以通过简洁的网页界面与 AI 进行对话交互。
+A powerful video recognition system that uses LLaMA Vision model to analyze video content and detect specific objects or scenes.
 
-## 功能特性
-- 支持实时对话交互
-- 简洁美观的用户界面
-- 支持历史对话记录
-- 响应式设计，适配移动端
+## Features
 
-## 安装说明
-1. 克隆仓库
+- 🎥 Video frame extraction and analysis
+- 🧠 Powered by LLaMA 3.2 Vision model
+- 🚀 GPU acceleration support
+- 🌐 Web-based interface
+- 🔄 Real-time analysis feedback
+- 📊 Visual results display
 
-## 模型文件
-本项目使用的模型文件由于体积较大未包含在仓库中。请按以下步骤获取：
+## Prerequisites
 
-1. 下载模型文件：
-   - [模型下载链接]
-   - 或使用 `huggingface-cli download` 命令下载
+- Python 3.8+
+- CUDA-capable GPU (recommended)
+- [Ollama](https://ollama.ai/) installed and running
+- LLaMA 3.2 Vision model
 
-2. 将下载的模型文件放置在项目的 `models` 目录下
+## Installation
 
-3. 确保目录结构如下：
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/video-recognition.git
+cd video-recognition
+```
+
+2. Create a virtual environment and activate it:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows, use: venv\Scripts\activate
+```
+
+3. Install the required packages:
+```bash
+pip install -r requirements.txt
+```
+
+4. Install Ollama following the instructions at [ollama.ai](https://ollama.ai)
+
+## Project Structure
+
+```
+video-recognition/
+├── templates/
+│   └── index.html
+├── uploads/          # Directory for uploaded videos
+├── frames/           # Directory for extracted frames
+├── app.py           # FastAPI application code
+├── main.py          # Main application logic
+├── requirements.txt  # Project dependencies
+└── README.md        # Project documentation
+```
+
+## Usage
+
+1. Start the application:
+```bash
+python main.py
+```
+
+2. Open your web browser and navigate to `http://localhost:8000`
+
+3. Upload a video and specify the object or scene you want to find
+
+4. Wait for the analysis results - the system will process the video and show matching frames
+
+## Configuration
+
+The system automatically detects and uses GPU if available. You can modify the following parameters in `main.py`:
+
+- `MODEL_NAME`: The vision model to use (default: 'llama3.2-vision')
+- `UPLOAD_DIR`: Directory for uploaded videos
+- `FRAMES_DIR`: Directory for extracted frames
+
+## Technical Details
+
+- Backend: FastAPI
+- Video Processing: OpenCV
+- AI Model: LLaMA 3.2 Vision
+- GPU Acceleration: CUDA via PyTorch
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- LLaMA Vision model by Meta
+- Ollama for model serving
+- FastAPI framework
+- OpenCV for video processing
