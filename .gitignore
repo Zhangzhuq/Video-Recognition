@@ -1,0 +1,94 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# 虚拟环境
+venv/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 操作系统
+.DS_Store
+Thumbs.db 
+
+# 环境变量
+.env
+.env.local
+.env.*.local
+
+# 日志文件
+*.log
+logs/
+npm-debug.log*
+
+# 测试覆盖率
+coverage/
+
+# 临时文件
+tmp/
+temp/
+
+# 数据库文件
+*.db
+*.sqlite
+*.sqlite3
+
+# 个人配置文件
+config.local.py
+
+# 模型文件和权重
+models/
+*.pt
+*.pth
+*.bin
+*.onnx
+*.tflite
+*.h5
+*.weights
+*.model
+model_weights/
+pretrained_models/
+models--*/
+*.safetensors
+
+# 大文件
+*.zip
+*.tar
+*.gz
+*.rar
+*.7z
+
+# 数据集
+datasets/
+data/
+raw_data/
+processed_data/
+
+# 缓存文件
+.cache/
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/

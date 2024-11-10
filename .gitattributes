@@ -1,0 +1,8 @@
+# 自动处理行尾符
+* text=auto
+
+# 指定文件使用 LF
+*.md text eol=lf
+*.json text eol=lf
+*.txt text eol=lf
+*.py text eol=lf 
